@@ -1,0 +1,103 @@
+
+\usepackage[letterpaper,top=1cm,bottom=1cm,left=0cm,right=0cm]{geometry}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+
+\title{Resume Template}
+\author{Grace Andersen}
+
+\usepackage{moresize}
+\usepackage[hidelinks]{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{picture,calc}
+\usepackage{fancyhdr}
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+
+\newcommand{\resumecolor}{\color{airforceblue}}
+
+\def\colstripe{
+    \AtBeginShipoutNext{\AtBeginShipoutUpperLeft{%
+            \put(0,-\paperheight){{\resumecolor\rule{5cm}{\paperheight}}} %
+        }
+    }
+
+}
+
+\fancypagestyle{plain}{ %
+    \fancyhead{\colstripe}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+
+\pagenumbering{gobble}%Removes page number
+\pagestyle{plain}
+
+\newcommand{\leftsectionhead}[1]{\vspace{0.5cm}
+{\Large {#1} }\\
+\vspace{0.2cm}}
+
+\newcommand{\firstname}[1]{\vspace{0cm}
+{\HUGE\textcolor{White}{#1}}}
+\newcommand{\lastname}[1]{{\HUGE\resumecolor{#1}}}
+
+\newcommand{\GPA}[1]{\fbox{
+\textbf{\textcolor{White}{GPA: {#1}}}
+}}
+
+\newcommand{\contactinfo}[1]{
+\vspace{1cm}
+\leftsectionhead{Contact Information}
+\small
+\vspace{0.2cm}
+{#1}
+}
+
+\newcommand{\education}[1]{
+\vspace{1cm}
+\leftsectionhead{Education}
+{\small
+\vspace{0.2cm}
+{#1}
+}
+\vspace{0.2cm}
+}
+
+\newcommand{\skills}[1]{\vspace{1cm}
+\leftsectionhead{Skills}
+{\small
+\vspace{0.2cm}
+{#1}
+}
+}
+
+
+\newcommand{\techskills}[1]{\vspace{1cm}
+\leftsectionhead{Technical Skills}
+{\small
+\vspace{0.2cm}
+Python, C++, Assembly\\
+PLCs\\
+\LaTeX\\
+Matlab\\
+Microsoft Office\\
+Spice\\
+}
+}
+
+\newcommand{\profile}[1]{\vspace{1.5cm}
+
+{\Large Profile}
+\vspace{0.2cm}
+
+{#1}
+\vspace{0.5cm}
+}
+
+\newcommand{\righthead}[1]{{\Large {#1}}}
+
+
+
